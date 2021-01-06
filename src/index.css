@@ -15,3 +15,12 @@ body {
 svg {
   cursor: pointer;
 }
+
+.check {
+  color: rgb(170, 170, 170);
+  text-decoration: solid line-through rgb(170, 170, 170) 2px;
+}
+
+.pointer {
+  cursor: pointer;
+}

@@ -8,6 +8,8 @@ header {
   font-family: "Pacifico", cursive;
   font-weight: 500;
   font-size: 2em;
+  color: black;
+  cursor: pointer;
 }
 .input {
   all: unset;

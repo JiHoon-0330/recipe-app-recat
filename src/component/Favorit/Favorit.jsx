@@ -12,7 +12,7 @@ const Favorit = props => {
       {items.length !== 0 && (
         <ul className={styles.ul}>
           {items.map(item => (
-            <RandomRecipe key={item}>{favorit[item]}</RandomRecipe>
+            <RandomRecipe key={item} recipe={favorit[item]} />
           ))}
         </ul>
       )}

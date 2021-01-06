@@ -1,0 +1,16 @@
+.p {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin: 0.5rem 0 0.15rem 0;
+  padding: 0 0.5rem;
+}
+.section {
+  max-height: 600px;
+  overflow: hidden;
+}
+.recipe {
+  min-height: 316px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(10px, 1fr));
+  font-size: 0.8em;
+}

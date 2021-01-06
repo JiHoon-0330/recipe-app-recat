@@ -11,6 +11,12 @@
 
 .img {
   width: 100%;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.img:hover {
+  filter: brightness(70%);
 }
 
 .container {
@@ -28,6 +34,7 @@
 
 .info > span {
   padding-right: 0.3em;
+  color: #686868;
 }
 
 .title {
@@ -37,6 +44,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: #3f3f3f;
 }
 
 .heart {

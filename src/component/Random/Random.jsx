@@ -18,13 +18,11 @@ const Random = ({ recipeApi }) => {
       <ul className={styles.ul}>
         {!loading &&
           Object.keys(random).map(item => (
-            <RandomRecipe key={item} loading={loading}>
-              {random[item]}
-            </RandomRecipe>
+            <RandomRecipe key={item} loading={loading} recipe={random[item]} />
           ))}
       </ul>
       {loading && (
-        <div className={styles.container}>
+        <div className={styles.loadingContainer}>
           <div className={styles.loading}></div>
         </div>
       )}

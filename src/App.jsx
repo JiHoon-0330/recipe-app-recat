@@ -1,10 +1,11 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import Header from "./component/Header/Header";
 import Footer from "./component/Footer/Footer";
 import Random from "./component/Random/Random";
 import styles from "./app.module.css";
 import Favorit from "./component/Favorit/Favorit";
+import Detail from "./component/Detail/Detail";
 
 const App = ({ recipeApi }) => {
   return (
@@ -16,6 +17,10 @@ const App = ({ recipeApi }) => {
             <Favorit />
             <Random recipeApi={recipeApi} />
           </Route>
+          <Route path="/recipe/:id">
+            <Detail recipeApi={recipeApi} />
+          </Route>
+          <Redirect from="*" to="/" />
         </Switch>
         <Footer />
       </BrowserRouter>
