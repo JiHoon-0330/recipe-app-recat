@@ -19,7 +19,7 @@
 }
 
 .img {
-  width: 500px;
+  width: 550px;
   border: 10px solid #c7b198;
   border-radius: 2em;
   margin-right: 1em;
@@ -52,13 +52,13 @@
   transform: translateY(0.25em);
 }
 .info {
-  font-size: 1.2em;
+  font-size: 1.1em;
   color: #804d14;
   word-break: break-all;
 }
 .ul > li {
   list-style: none;
-  font-size: 1.2em;
+  font-size: 1.1em;
   color: #804d14;
   word-break: break-all;
 }
@@ -72,7 +72,7 @@
 
 .pre {
   white-space: pre-line;
-  font-size: 1.2em;
+  font-size: 1.1em;
   color: #804d14;
 }
 

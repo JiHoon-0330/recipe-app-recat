@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import { FavoritContext } from "../../context/context";
+import { Context } from "../../context/context";
 import RandomRecipe from "../Recipe/Recipe";
 import styles from "./style.module.css";
 
-const Favorit = props => {
-  const { favorit, setFavorit } = useContext(FavoritContext);
+const Favorit = () => {
+  const { favorit } = useContext(Context);
   const items = Object.keys(favorit);
   return (
     <section className={styles.section}>
@@ -18,7 +18,7 @@ const Favorit = props => {
       )}
       {items.length === 0 && (
         <div className={styles.container}>
-          <p>좋아하는 레시피를 추가해보세요!</p>
+          <p className={styles.p}>좋아하는 레시피를 추가해보세요!</p>
         </div>
       )}
     </section>

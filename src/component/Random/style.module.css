@@ -2,8 +2,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 1em;
-  max-width: 1700px;
+  margin-bottom: 3em;
 }
 
 .favorit,
@@ -23,12 +22,13 @@
 .h2 {
   text-align: center;
   font-size: 1.5em;
+  font-weight: 500;
   line-height: 2em;
-  margin-top: 3em;
+  color: #4b3215;
 }
 
 .loadingContainer {
-  min-height: 1000px;
+  min-height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,9 +38,9 @@
   width: 10em;
   height: 10em;
   display: block;
-  border: 1em solid gray;
+  border: 1em solid #c7b198;
   border-radius: 50%;
-  border-top: 1em solid black;
+  border-top: 1em solid #804d14;
   animation: loading 2s linear infinite;
 }
 

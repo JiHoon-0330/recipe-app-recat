@@ -4,8 +4,8 @@ import Header from "./component/Header/Header";
 import Footer from "./component/Footer/Footer";
 import Random from "./component/Random/Random";
 import styles from "./app.module.css";
-import Favorit from "./component/Favorit/Favorit";
 import Detail from "./component/Detail/Detail";
+import Search from "./component/Search/Search";
 
 const App = ({ recipeApi }) => {
   return (
@@ -18,6 +18,9 @@ const App = ({ recipeApi }) => {
           </Route>
           <Route path="/recipe/:id">
             <Detail recipeApi={recipeApi} />
+          </Route>
+          <Route path="/search/:keyword">
+            <Search recipeApi={recipeApi} />
           </Route>
           <Redirect from="*" to="/" />
         </Switch>

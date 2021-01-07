@@ -33,7 +33,7 @@
 }
 
 .loadingContainer {
-  min-height: 1000px;
+  min-height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,9 +43,9 @@
   width: 10em;
   height: 10em;
   display: block;
-  border: 1em solid gray;
+  border: 1em solid #c7b198;
   border-radius: 50%;
-  border-top: 1em solid black;
+  border-top: 1em solid #804d14;
   animation: loading 2s linear infinite;
 }
 

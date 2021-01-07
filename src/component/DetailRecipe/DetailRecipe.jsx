@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { FavoritContext } from "../../context/context";
+import { Context } from "../../context/context";
 import styles from "./style.module.css";
 
 const DetailRecipe = ({ recipe }) => {
@@ -15,7 +15,7 @@ const DetailRecipe = ({ recipe }) => {
   } = recipe;
   const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
   const youtubeId = strYoutube && strYoutube.match(regExp)[7];
-  const { favorit, checkFavorit } = useContext(FavoritContext);
+  const { favorit, checkFavorit } = useContext(Context);
 
   const [checked, setChecked] = useState({});
   const getIngredientMeasure = () => {

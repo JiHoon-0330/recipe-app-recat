@@ -1,11 +1,11 @@
 import React, { useContext, useRef } from "react";
 import styles from "./style.module.css";
-import { FavoritContext } from "../../context/context";
+import { Context } from "../../context/context";
 import { Link } from "react-router-dom";
 
 const Random = ({ recipe }) => {
   const { idMeal, strMeal, strCategory, strArea, strMealThumb } = recipe;
-  const { favorit, checkFavorit } = useContext(FavoritContext);
+  const { favorit, checkFavorit } = useContext(Context);
   const onClickLike = () => {
     checkFavorit(recipe);
   };
@@ -30,10 +30,11 @@ const Random = ({ recipe }) => {
         <div className={styles.container}>
           <div className={styles.info}>
             <p className={styles.title}>{strMeal}</p>
-            {strCategory && (
-              <span className={styles.category}>{strCategory},</span>
+            {strCategory && strArea && (
+              <span
+                className={styles.category}
+              >{`${strCategory}, ${strArea}`}</span>
             )}
-            {strArea && <span className={styles.area}>{strArea}</span>}
           </div>
           <span
             className={`${styles.heart} ${favorit[idMeal] && styles.check}`}

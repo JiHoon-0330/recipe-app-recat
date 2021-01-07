@@ -62,6 +62,44 @@ class Recipe {
       });
     return data.meals && data.meals;
   }
+  async getArea(area) {
+    const requestOptions = {
+      method: "GET"
+    };
+    const data = await fetch(
+      `https://www.themealdb.com/api/json/v1/1/filter.php?a=${area}}`,
+      requestOptions
+    )
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("getArea: Network response was not ok");
+        }
+        return response.json();
+      })
+      .catch(error => {
+        console.log(`getArea has been a problem: ${error}`);
+      });
+    return data.meals && data.meals;
+  }
+  async getName(name) {
+    const requestOptions = {
+      method: "GET"
+    };
+    const data = await fetch(
+      `https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`,
+      requestOptions
+    )
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("getName: Network response was not ok");
+        }
+        return response.json();
+      })
+      .catch(error => {
+        console.log(`getName has been a problem: ${error}`);
+      });
+    return data.meals && data.meals;
+  }
 }
 
 export default Recipe;

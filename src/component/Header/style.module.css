@@ -5,6 +5,7 @@ header {
   align-items: flex-end;
   padding: 1em 2em;
   background-color: #f0ece2;
+  margin-bottom: 3em;
 }
 
 .title {
@@ -25,9 +26,14 @@ header {
   font-size: 20px;
   padding: 5px;
   font-size: 1.2em;
+  color: #804d14;
 }
 
 .icon {
   font-size: 1.3em;
   color: rgb(173, 133, 84);
+}
+
+.button {
+  all: unset;
 }

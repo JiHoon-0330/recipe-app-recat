@@ -1,19 +1,38 @@
-import React, { memo } from "react";
-import { Link } from "react-router-dom";
+import React, { memo, useContext, useRef } from "react";
+import { Link, useHistory } from "react-router-dom";
+import { Context } from "../../context/context";
 import styles from "./style.module.css";
 
-const Header = memo(() => (
-  <header>
-    <Link to="/">
-      <h1 className={styles.title}>RecipeApp</h1>
-    </Link>
-    <div className={styles.div}>
-      <input className={styles.input} type="text" />
-      <span className={styles.icon}>
-        <i className="fas fa-search"></i>
-      </span>
-    </div>
-  </header>
-));
+const Header = memo(() => {
+  const { setKeyword } = useContext(Context);
+  const inputRef = useRef();
+  const history = useHistory();
+  const onSubmit = event => {
+    event.preventDefault();
+    if (inputRef.current.value) {
+      inputRef.current.value &&
+        history.push(`/search/${inputRef.current.value}`);
+      inputRef.current.value = "";
+    }
+  };
+
+  return (
+    <header>
+      <Link to="/">
+        <h1 className={styles.title}>RecipeApp</h1>
+      </Link>
+      <div className={styles.div}>
+        <form onSubmit={onSubmit}>
+          <input ref={inputRef} className={styles.input} type="text" />
+          <button className={styles.button}>
+            <span className={styles.icon}>
+              <i className="fas fa-search"></i>
+            </span>
+          </button>
+        </form>
+      </div>
+    </header>
+  );
+});
 
 export default Header;

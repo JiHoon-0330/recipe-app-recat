@@ -12,6 +12,7 @@ const Random = ({ recipeApi }) => {
       setRandom(data);
       setLoading(false);
     });
+    return setLoading(true);
   }, [recipeApi]);
 
   return (

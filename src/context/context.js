@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 
-export const FavoritContext = React.createContext();
+export const Context = React.createContext();
 
-const FavoritContextFrovider = ({ children }) => {
+const ContextFrovider = ({ children }) => {
   const [favorit, setFavorit] = useState({});
+
   const checkFavorit = recipe => {
     setFavorit(items => {
       const { idMeal, strMeal, strCategory, strArea, strMealThumb } = recipe;
@@ -21,10 +22,10 @@ const FavoritContextFrovider = ({ children }) => {
     });
   };
   return (
-    <FavoritContext.Provider value={{ favorit, checkFavorit }}>
+    <Context.Provider value={{ favorit, checkFavorit }}>
       {children}
-    </FavoritContext.Provider>
+    </Context.Provider>
   );
 };
 
-export default FavoritContextFrovider;
+export default ContextFrovider;

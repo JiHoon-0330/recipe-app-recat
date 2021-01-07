@@ -1,0 +1,20 @@
+.section {
+  width: 100%;
+  padding: 0.5rem;
+}
+.section > * {
+  margin-bottom: 3em;
+}
+.ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: 1.5em;
+  padding: 0.5rem;
+}
+.p {
+  font-size: 1.1em;
+  padding: 0.5rem;
+}
