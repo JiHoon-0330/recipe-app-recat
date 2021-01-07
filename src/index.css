@@ -24,8 +24,7 @@ svg {
 }
 
 .check {
-  color: rgb(170, 170, 170);
-  text-decoration: solid line-through rgb(170, 170, 170) 2px;
+  text-decoration: solid line-through #4b3215 3px;
 }
 
 .pointer {
