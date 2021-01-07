@@ -17,7 +17,7 @@ const Recommend = ({ recipeApi, strCategory }) => {
   }, [recipeApi, strCategory]);
   return (
     <>
-      <p className={styles.p}>Recommend Recipe</p>
+      <p className={styles.p}>Recommended Recipe</p>
       {!loading && (
         <section className={styles.section}>
           <ul className={styles.recipe}>

@@ -1,27 +1,33 @@
 header {
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-end;
-  padding: 1.5em 2em;
-}
-.title {
-  font-family: "Pacifico", cursive;
-  font-weight: 500;
-  font-size: 2em;
-  color: black;
-  cursor: pointer;
-}
-.input {
-  all: unset;
-  flex: 1;
-  border-bottom: 1px solid black;
-  font-size: 1.5em;
+  padding: 1em 2em;
+  background-color: #f0ece2;
 }
 
-.input:focus {
-  border-bottom: 1px solid blue;
+.title {
+  font-family: "Pacifico", cursive;
+  font-size: 2em;
+  color: #4d371c;
+  cursor: pointer;
+  font-weight: 500;
+  margin-right: 0.5em;
+}
+
+.div {
+  border-bottom: 0.15em solid rgb(173, 133, 84);
+}
+
+.input {
+  all: unset;
+  font-size: 20px;
+  padding: 5px;
+  font-size: 1.2em;
 }
 
 .icon {
-  font-size: 1.5em;
+  font-size: 1.3em;
+  color: rgb(173, 133, 84);
 }

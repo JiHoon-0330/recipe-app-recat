@@ -14,7 +14,6 @@ const App = ({ recipeApi }) => {
         <Header />
         <Switch>
           <Route path="/" exact>
-            <Favorit />
             <Random recipeApi={recipeApi} />
           </Route>
           <Route path="/recipe/:id">

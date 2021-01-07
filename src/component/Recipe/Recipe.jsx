@@ -9,12 +9,23 @@ const Random = ({ recipe }) => {
   const onClickLike = () => {
     checkFavorit(recipe);
   };
-
+  const onClickImg = () => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "auto"
+    });
+  };
   return (
     <li className={styles.li}>
       <div className={styles.div}>
         <Link to={`/recipe/${idMeal}`}>
-          <img className={styles.img} src={strMealThumb} alt="meal" />
+          <img
+            className={styles.img}
+            src={strMealThumb}
+            alt="meal"
+            onClick={onClickImg}
+          />
         </Link>
         <div className={styles.container}>
           <div className={styles.info}>

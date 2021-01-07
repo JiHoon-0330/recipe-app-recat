@@ -13,6 +13,7 @@ const Detail = ({ recipeApi }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
     recipeApi //
       .getId(id)
       .then(data => {
@@ -26,9 +27,9 @@ const Detail = ({ recipeApi }) => {
   }, [recipeApi, id]);
 
   return (
-    <section className={styles.section}>
+    <>
       {!loading && (
-        <>
+        <section className={styles.section}>
           {!error && (
             <>
               <section className={styles.meal}>
@@ -52,9 +53,14 @@ const Detail = ({ recipeApi }) => {
             </>
           )}
           {error && <div>{error}</div>}
-        </>
+        </section>
       )}
-    </section>
+      {loading && (
+        <div className={styles.loadingContainer}>
+          <div className={styles.loading}></div>
+        </div>
+      )}
+    </>
   );
 };
 

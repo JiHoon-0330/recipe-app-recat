@@ -8,7 +8,7 @@ const Favorit = props => {
   const items = Object.keys(favorit);
   return (
     <section className={styles.section}>
-      <h2 className={styles.h2}>favorit recipe</h2>
+      <h2 className={styles.h2}>나의 레시피</h2>
       {items.length !== 0 && (
         <ul className={styles.ul}>
           {items.map(item => (

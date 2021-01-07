@@ -8,8 +8,15 @@
 }
 
 body {
+  width: 100vw;
+  max-width: 100%;
+  min-width: 900px;
   display: flex;
   justify-content: center;
+}
+
+#root {
+  width: 100%;
 }
 
 svg {

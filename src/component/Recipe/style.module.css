@@ -1,5 +1,5 @@
 .li {
-  width: 100%;
+  width: 220px;
   list-style: none;
   padding: 0.5rem;
   margin: 0.5rem 0;
@@ -33,13 +33,15 @@
 }
 
 .info > span {
+  font-size: 0.9em;
   padding-right: 0.3em;
+
   color: #686868;
 }
 
 .title {
   width: 100%;
-  font-size: 1.2em;
+  font-size: 1em;
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;

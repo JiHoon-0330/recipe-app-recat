@@ -1,6 +1,7 @@
 .app {
   display: flex;
   flex-direction: column;
-  width: 1200px;
-  background-color: antiquewhite;
+  align-items: center;
+  width: 100%;
+  background-color: #f0ece2;
 }
