@@ -1,9 +1,9 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext, memo } from "react";
 import styles from "./style.module.css";
 import { Context } from "../../context/context";
 import { Link } from "react-router-dom";
 
-const Random = ({ recipe }) => {
+const Random = memo(({ recipe }) => {
   const { idMeal, strMeal, strCategory, strArea, strMealThumb } = recipe;
   const { favorit, checkFavorit } = useContext(Context);
   const onClickLike = () => {
@@ -46,6 +46,6 @@ const Random = ({ recipe }) => {
       </div>
     </li>
   );
-};
+});
 
 export default Random;

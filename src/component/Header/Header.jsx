@@ -1,10 +1,8 @@
-import React, { memo, useContext, useRef } from "react";
+import React, { memo, useRef } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { Context } from "../../context/context";
 import styles from "./style.module.css";
 
 const Header = memo(() => {
-  const { setKeyword } = useContext(Context);
   const inputRef = useRef();
   const history = useHistory();
   const onSubmit = event => {

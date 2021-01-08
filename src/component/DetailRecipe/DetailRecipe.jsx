@@ -1,8 +1,8 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, memo } from "react";
 import { Context } from "../../context/context";
 import styles from "./style.module.css";
 
-const DetailRecipe = ({ recipe }) => {
+const DetailRecipe = memo(({ recipe }) => {
   const {
     idMeal,
     strMeal,
@@ -41,7 +41,6 @@ const DetailRecipe = ({ recipe }) => {
 
   const onClick = event => {
     const id = event.target.dataset.id;
-    console.log(id);
     setChecked(items => {
       if (items[id]) {
         const newItems = { ...items };
@@ -101,6 +100,6 @@ const DetailRecipe = ({ recipe }) => {
       )}
     </section>
   );
-};
+});
 
 export default DetailRecipe;
