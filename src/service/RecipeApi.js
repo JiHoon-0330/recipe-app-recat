@@ -15,21 +15,21 @@ class Recipe {
       .catch(error => {
         console.log(`has been a problem: ${error}`);
       });
-    return data.meals && data.meals[0];
+    return data.meals && data.meals;
   }
 
   async getRandom(cnt) {
     const dataArr = {};
     for (let i = 0; i < cnt; i++) {
       const data = await this.getData(`random.php`);
-      dataArr[data.idMeal] = data;
+      dataArr[data[0].idMeal] = data[0];
     }
     return dataArr;
   }
 
   async getId(id) {
     const data = await this.getData(`lookup.php?i=${id}`);
-    return data;
+    return data[0];
   }
 
   async getCategory(category) {
