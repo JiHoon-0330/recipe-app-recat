@@ -21,9 +21,8 @@ const Recommend = ({ recipeApi, strCategory }) => {
       {!loading && (
         <section className={styles.section}>
           <ul className={styles.recipe}>
-            {recipe.map((item, index) => (
-              <Recipe key={index} recipe={item} />
-            ))}
+            {recipe &&
+              recipe.map((item, index) => <Recipe key={index} recipe={item} />)}
           </ul>
         </section>
       )}
