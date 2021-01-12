@@ -2,7 +2,7 @@
 
 ## 리액트 훅을 사용해 제작
 
-[사이트 바로가기]()
+[사이트 바로가기](https://jihoon-recipe-app.netlify.app)
 
 ## 메인화면
 
