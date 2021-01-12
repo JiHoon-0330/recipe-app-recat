@@ -21,6 +21,15 @@ const index = memo(() => (
           네이버웨일 확장앱 아!맞다
         </a>
       </span>
+      <span className={styles.name}>
+        <a
+          href="https://jihoon-0330.github.io/watch-clone-react"
+          target="_blank"
+          rel="noreferrer"
+        >
+          왓챠 클론 프로젝트
+        </a>
+      </span>
     </div>
     <div className={styles.container}>
       <span className={styles.menu}>깃허브</span>
@@ -31,6 +40,15 @@ const index = memo(() => (
           rel="noreferrer"
         >
           네이버웨일 확장앱 아!맞다
+        </a>
+      </span>
+      <span className={styles.name}>
+        <a
+          href="https://github.com/JiHoon-0330/watch-clone-react"
+          target="_blank"
+          rel="noreferrer"
+        >
+          왓챠 클론 프로젝트
         </a>
       </span>
     </div>

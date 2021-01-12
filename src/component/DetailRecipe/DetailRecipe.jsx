@@ -13,7 +13,7 @@ const DetailRecipe = memo(({ recipe }) => {
     strTags,
     strYoutube
   } = recipe;
-  const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+  const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
   const youtubeId = strYoutube && strYoutube.match(regExp)[7];
   const { favorit, checkFavorit } = useContext(Context);
 
@@ -89,6 +89,7 @@ const DetailRecipe = memo(({ recipe }) => {
       {youtubeId && (
         <div className={styles.youtube}>
           <iframe
+            title="youtube"
             width="1200px"
             height="675px"
             src={`https://www.youtube.com/embed/${youtubeId}`}

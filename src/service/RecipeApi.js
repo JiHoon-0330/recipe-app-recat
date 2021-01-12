@@ -1,104 +1,48 @@
 class Recipe {
+  baseUrl = "https://www.themealdb.com/api/json/v1/1/";
+  requestOptions = {
+    method: "GET"
+  };
+
+  async getData(params) {
+    const data = await fetch(`${this.baseUrl}${params}`, this.requestOptions)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .catch(error => {
+        console.log(`has been a problem: ${error}`);
+      });
+    return data.meals && data.meals[0];
+  }
+
   async getRandom(cnt) {
-    const requestOptions = {
-      method: "GET"
-    };
     const dataArr = {};
     for (let i = 0; i < cnt; i++) {
-      const data = await fetch(
-        "https://www.themealdb.com/api/json/v1/1/random.php",
-        requestOptions
-      )
-        .then(response => {
-          if (!response.ok) {
-            throw new Error("getRandom: Network response was not ok");
-          }
-          return response.json();
-        })
-        .catch(error => {
-          console.log(`getRandom has been a problem: ${error}`);
-        });
-      dataArr[data.meals[0].idMeal] = data.meals[0];
+      const data = await this.getData(`random.php`);
+      dataArr[data.idMeal] = data;
     }
     return dataArr;
   }
 
   async getId(id) {
-    const requestOptions = {
-      method: "GET"
-    };
-    const data = await fetch(
-      `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`,
-      requestOptions
-    )
-      .then(response => {
-        if (!response.ok) {
-          throw new Error("getId: Network response was not ok");
-        }
-        return response.json();
-      })
-      .catch(error => {
-        console.log(`getId has been a problem: ${error}`);
-      });
-    return data.meals && data.meals[0];
+    const data = await this.getData(`lookup.php?i=${id}`);
+    return data;
   }
 
   async getCategory(category) {
-    const requestOptions = {
-      method: "GET"
-    };
-    const data = await fetch(
-      `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`,
-      requestOptions
-    )
-      .then(response => {
-        if (!response.ok) {
-          throw new Error("getCategory: Network response was not ok");
-        }
-        return response.json();
-      })
-      .catch(error => {
-        console.log(`getCategory has been a problem: ${error}`);
-      });
-    return data.meals && data.meals;
+    const data = await this.getData(`filter.php?c=${category}`);
+    return data;
   }
   async getArea(area) {
-    const requestOptions = {
-      method: "GET"
-    };
-    const data = await fetch(
-      `https://www.themealdb.com/api/json/v1/1/filter.php?a=${area}}`,
-      requestOptions
-    )
-      .then(response => {
-        if (!response.ok) {
-          throw new Error("getArea: Network response was not ok");
-        }
-        return response.json();
-      })
-      .catch(error => {
-        console.log(`getArea has been a problem: ${error}`);
-      });
-    return data.meals && data.meals;
+    const data = await this.getData(`filter.php?a=${area}}`);
+    return data;
   }
   async getName(name) {
-    const requestOptions = {
-      method: "GET"
-    };
-    const data = await fetch(
-      `https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`,
-      requestOptions
-    )
-      .then(response => {
-        if (!response.ok) {
-          throw new Error("getName: Network response was not ok");
-        }
-        return response.json();
-      })
-      .catch(error => {
-        console.log(`getName has been a problem: ${error}`);
-      });
-    return data.meals && data.meals;
+    const data = await this.getData(`search.php?s=${name}`);
+    return data;
   }
 }
 

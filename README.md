@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Recipe App 프로젝트
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 리액트 훅을 사용해 제작
 
-## Available Scripts
+[사이트 바로가기]()
 
-In the project directory, you can run:
+## 메인화면
 
-### `yarn start`
+![메인화면](https://user-images.githubusercontent.com/58219394/104287626-0f4a0b00-54fa-11eb-80c5-ff9fc5a579e4.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 메인화면 (width 1400px 이하)
 
-### `yarn test`
+![메인화면2](https://user-images.githubusercontent.com/58219394/104287621-0eb17480-54fa-11eb-8365-9b3535fcd9ac.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `yarn build`
+## 상세화면
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![상세화면](https://user-images.githubusercontent.com/58219394/104287628-0fe2a180-54fa-11eb-8406-c00c39400bb9.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 검색화면
 
-### `yarn eject`
+![검색화면](https://user-images.githubusercontent.com/58219394/104287607-0bb68400-54fa-11eb-9848-271c414cfcc4.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# 사용한 API
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+[TheMealDB 바로가기](https://www.themealdb.com/)  
+[TheMealDB API 바로가기](https://www.themealdb.com/api.php)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+TheMealDB 에서 제공하는 API 사용
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| 요청 |              이름              |           내용           |
+| :--: | :----------------------------: | :----------------------: |
+| Get  | Lookup full meal details by id |     레시피 상세 정보     |
+| Get  |  Lookup a single random meal   | 레시피 랜덤으로 가져오기 |
+| Get  |      Search meal by name       |   레시피 이름으로 검색   |
+| Get  |       Filter by Category       |  레시피 카테고리로 검색  |
+| Get  |         Filter by Area         |   레시피 지역으로 검색   |
