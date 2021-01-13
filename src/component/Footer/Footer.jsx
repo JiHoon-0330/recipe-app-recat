@@ -23,7 +23,7 @@ const index = memo(() => (
       </span>
       <span className={styles.name}>
         <a
-          href="https://jihoon-0330.github.io/watch-clone-react"
+          href="https://jihoon-watcha-clone.netlify.app"
           target="_blank"
           rel="noreferrer"
         >
